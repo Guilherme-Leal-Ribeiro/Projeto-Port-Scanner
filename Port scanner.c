@@ -44,7 +44,7 @@ void menuScanner(){
     int port_range[2];
     printf("\nDigite o intervalo de portas para escanear\n");
     int reads = scanf("%d %d", &port_range[0], &port_range[1]);
-    if (reads != 2 || port_range[0] > port_range[1] || port_range[0] < 0 || port_range[1] > 65535) {
+    if (reads != 2 || port_range[0] > port_range[1] || port_range[0] <= 0 || port_range[1] > 65535) {
         printf("Intervalo invalido\n");
         return;
     }
