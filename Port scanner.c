@@ -30,7 +30,7 @@ void startWinSock(){
 
 void menuScanner(){
     //ip address need to be correct
-    printf("\nDigite o IP para escanear\n");
+    printf("Digite o IP para escanear\n");
     char ip_buffer[IP_BUFFER_SIZE];
     if (requestIp(ip_buffer) == -1) {
         printf("Erro ao ler o IP\n");
