@@ -6,7 +6,7 @@
 #include <winsock2.h>
 #include <ws2tcpip.h>
 
-#define PORT_TIMEOUT_US 300000 //Timeout for check port
+#define PORT_TIMEOUT_US 200000 //Timeout for check port
 #define IP_BUFFER_SIZE 64 //Size to IP
 
 void startWinSock();
@@ -42,7 +42,7 @@ void menuScanner(){
     int filtered_count = 0;
 
     int port_range[2];
-    printf("\nDigite o intervalo de portas para escanear\n");
+    printf("Digite o intervalo de portas para escanear\n");
     int reads = scanf("%d %d", &port_range[0], &port_range[1]);
     if (reads != 2 || port_range[0] > port_range[1] || port_range[0] <= 0 || port_range[1] > 65535) {
         printf("Intervalo invalido\n");
@@ -55,6 +55,7 @@ void menuScanner(){
 
     printf("%d Portas bloqueadas\n", closed_count);
     printf("%d Portas filtradas\n", filtered_count);
+    printf("\n");
 }
 
 // reads IP as string
