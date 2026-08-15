@@ -159,7 +159,7 @@ int main(){
     startWinSock();
 
     while(1){
-        printf("\n1. Port Scanner\n");
+        printf("1. Port Scanner\n");
         printf("0. Sair\n");
 
         int option;
