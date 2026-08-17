@@ -49,6 +49,6 @@ main → menuScanner → buildSocket (por porta) → socketCreate + socketConnec
 - **`socketCreate`**: cria o socket e configura como não-bloqueante
 - **`socketConnect`**: preenche as informações de destino e inicia a conexão
 - **`scanner`**: usa `select()` para verificar se a conexão foi concluída dentro do timeout, e classifica a porta como aberta, fechada ou filtrada
-- **`buildSocket`**: orquestra a sequência criar → conectar → escanear para uma porta
-- **`menuScanner`**: coleta IP e intervalo de portas do usuário, executa o loop de scan e exibe o resumo final
-- **`requestIp`**: lê o IP digitado via `fgets`
+- **`buildSocket`**: organiza a sequência criar → conectar → escanear para uma porta
+- **`menuScanner`**: coleta IP e intervalo de portas do usuário, executa scan e exibe o resumo final
+- **`requestIp`**: lê o IP digitado
